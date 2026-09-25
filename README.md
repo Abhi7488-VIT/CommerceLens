@@ -1,6 +1,6 @@
 # CommerceLens — E-Commerce Revenue & Retention Analytics
 
-**Live dashboard:** TODO: add Streamlit Community Cloud link after deploying
+**Live dashboard:** [commercelens.streamlit.app](https://commercelens.streamlit.app/)
 
 > **Problem:** A Brazilian marketplace (Olist, ~100k orders) needs to know where its revenue comes from and what drives customer satisfaction and repeat purchases.
 > **Key finding:** Late delivery is the dominant driver of bad reviews. Late orders are 6.7% of orders but get 1-2★ reviews 62.4% of the time (vs 9.3% on time), and lateness is concentrated in specific regions such as RJ, not in specific sellers. Freight price barely matters once delivery is on time.
