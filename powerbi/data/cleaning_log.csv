@@ -1,0 +1,16 @@
+step,detail,affected_rows
+C01-C02,UTF-8; trim strings; empty strings to null,99441
+C03,Duplicate order IDs removed,0
+C04,Duplicate transaction customer IDs removed,0
+C05,Exact duplicate item rows removed,0
+C06,Exact duplicate payment rows removed; split tenders retained,0
+C07,Superseded review rows removed,551
+C08,Orders with no item rows; revenue set to zero,775
+C09,Delivered orders with missing delay; excluded from lateness denominator,8
+C10,Five-day bins; early deliveries retained,99441
+C11,Multiple transaction addresses consolidated to person dimension,3345
+C12,RFM as of 2018-10-18; median monetary 107.78,93358
+C13,Products with missing English translation or category,623
+C14,Geolocation duplicate or invalid points excluded,280007
+C15,Continuous full-year calendar,1096
+C16,Delivered orders with no valid review; excluded from review denominators,646
