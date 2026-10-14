@@ -1,0 +1,244 @@
+// CommerceLens measures, home table: fact_orders. Formats and display folders are applied in model.bim.
+// DAX query view: paste this whole file, then use "Update model with changes" to add every measure.
+// Format strings are not part of DEFINE MEASURE; the intended format is in each comment.
+DEFINE
+
+    // 01 Core | Gross item value plus freight, all statuses unless filtered. Not net recognized revenue; no refund data.
+    // Format: "R$" #,0.00;("R$" #,0.00);"R$" 0.00
+    MEASURE 'fact_orders'[Total Revenue] =
+        SUM(fact_order_items[revenue])
+
+    // 01 Core | Distinct order-grain rows; category/seller uses virtual order membership without double counting.
+    // Format: #,0
+    MEASURE 'fact_orders'[Orders] =
+        VAR MatchingOrders = VALUES(fact_order_items[order_id])
+        VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)
+        RETURN IF(ProductOrSellerFilter,
+            CALCULATE(COUNTROWS(fact_orders), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),
+            COUNTROWS(fact_orders))
+
+    // 01 Core | Selected item revenue divided by matching orders. Category selection gives selected-category spend per matching order.
+    // Format: "R$" #,0.00;("R$" #,0.00);"R$" 0.00
+    MEASURE 'fact_orders'[AOV] =
+        DIVIDE([Total Revenue], [Orders])
+
+    // 01 Core | Delivered Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Delivered Orders] =
+        CALCULATE([Orders], KEEPFILTERS(fact_orders[order_status] = "delivered"))
+
+    // 02 Delivery | Delivery Eligible Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Delivery Eligible Orders] =
+        CALCULATE([Delivered Orders], KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))
+
+    // 02 Delivery | Late Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Late Orders] =
+        CALCULATE([Delivery Eligible Orders], KEEPFILTERS(fact_orders[is_late] = TRUE()))
+
+    // 02 Delivery | Delivered orders with positive calendar-day delay / delivered orders with both dates.
+    // Format: 0.00%
+    MEASURE 'fact_orders'[Late Delivery %] =
+        DIVIDE([Late Orders], [Delivery Eligible Orders])
+
+    // 02 Delivery | Delay Sum
+    // Format: #,0
+    MEASURE 'fact_orders'[Delay Sum] =
+        VAR MatchingOrders = VALUES(fact_order_items[order_id])
+        VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)
+        RETURN IF(ProductOrSellerFilter,
+            CALCULATE(SUM(fact_orders[delay_days]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),
+            SUM(fact_orders[delay_days]))
+
+    // 02 Delivery | Mean delay among late delivered orders only.
+    // Format: 0.0
+    MEASURE 'fact_orders'[Avg Delay Days] =
+        DIVIDE(CALCULATE([Delay Sum], KEEPFILTERS(fact_orders[order_status]="delivered"), KEEPFILTERS(fact_orders[is_late]=TRUE())), [Late Orders])
+
+    // 03 Reviews | Review Points
+    // Format: #,0
+    MEASURE 'fact_orders'[Review Points] =
+        VAR MatchingOrders = VALUES(fact_order_items[order_id])
+        VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)
+        RETURN IF(ProductOrSellerFilter,
+            CALCULATE(SUM(fact_orders[review_score]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),
+            SUM(fact_orders[review_score]))
+
+    // 03 Reviews | Reviewed Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Reviewed Orders] =
+        VAR MatchingOrders = VALUES(fact_order_items[order_id])
+        VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)
+        RETURN IF(ProductOrSellerFilter,
+            CALCULATE(COUNT(fact_orders[review_score]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),
+            COUNT(fact_orders[review_score]))
+
+    // 03 Reviews | Delivered Reviewed Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Delivered Reviewed Orders] =
+        CALCULATE([Reviewed Orders], KEEPFILTERS(fact_orders[order_status]="delivered"))
+
+    // 03 Reviews | Latest valid review per delivered order. Missing reviews are excluded, never scored as zero.
+    // Format: 0.00
+    MEASURE 'fact_orders'[Avg Review Score] =
+        DIVIDE(CALCULATE([Review Points], KEEPFILTERS(fact_orders[order_status]="delivered")), [Delivered Reviewed Orders])
+
+    // 03 Reviews | Low Review Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Low Review Orders] =
+        CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[review_score] IN {1,2}))
+
+    // 03 Reviews | Low Review %
+    // Format: 0.00%
+    MEASURE 'fact_orders'[Low Review %] =
+        DIVIDE([Low Review Orders], [Delivered Reviewed Orders])
+
+    // 03 Reviews | Late Reviewed Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Late Reviewed Orders] =
+        CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[is_late]=TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))
+
+    // 03 Reviews | On-time Reviewed Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[On-time Reviewed Orders] =
+        CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))
+
+    // 03 Reviews | Low Review % (Late)
+    // Format: 0.00%
+    MEASURE 'fact_orders'[Low Review % (Late)] =
+        DIVIDE(CALCULATE([Low Review Orders], KEEPFILTERS(fact_orders[is_late]==TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days]))), [Late Reviewed Orders])
+
+    // 03 Reviews | Avg Rating (Late)
+    // Format: 0.00
+    MEASURE 'fact_orders'[Avg Rating (Late)] =
+        CALCULATE([Avg Review Score], KEEPFILTERS(fact_orders[is_late]==TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))
+
+    // 03 Reviews | Low Review % (On-time)
+    // Format: 0.00%
+    MEASURE 'fact_orders'[Low Review % (On-time)] =
+        DIVIDE(CALCULATE([Low Review Orders], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days]))), [On-time Reviewed Orders])
+
+    // 03 Reviews | Avg Rating (On-time)
+    // Format: 0.00
+    MEASURE 'fact_orders'[Avg Rating (On-time)] =
+        CALCULATE([Avg Review Score], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))
+
+    // 03 Reviews | Late vs On-time Gap (pp)
+    // Format: 0.00 "pp"
+    MEASURE 'fact_orders'[Late vs On-time Gap (pp)] =
+        VAR LateRate = [Low Review % (Late)]
+        VAR OnTimeRate = [Low Review % (On-time)]
+        RETURN IF(NOT ISBLANK(LateRate) && NOT ISBLANK(OnTimeRate), (LateRate-OnTimeRate)*100)
+
+    // 04 Time | Uses purchase date. Edge months are partial; percent change is blank when prior revenue is zero/missing.
+    // Format: 0.0%
+    MEASURE 'fact_orders'[Revenue MoM %] =
+        VAR PriorMonth = CALCULATE([Total Revenue], DATEADD(dim_date[Date], -1, MONTH))
+        RETURN DIVIDE([Total Revenue]-PriorMonth, PriorMonth)
+
+    // 04 Time | Revenue YTD
+    // Format: "R$" #,0.00;("R$" #,0.00);"R$" 0.00
+    MEASURE 'fact_orders'[Revenue YTD] =
+        TOTALYTD([Total Revenue], dim_date[Date])
+
+    // 04 Time | Revenue Same Period Last Year
+    // Format: "R$" #,0.00;("R$" #,0.00);"R$" 0.00
+    MEASURE 'fact_orders'[Revenue Same Period Last Year] =
+        CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(dim_date[Date]))
+
+    // 05 Customers | Delivered Customers
+    // Format: #,0
+    MEASURE 'fact_orders'[Delivered Customers] =
+        COUNTROWS(FILTER(VALUES(dim_customer[customer_unique_id]), CALCULATE([Delivered Orders]) > 0))
+
+    // 05 Customers | Repeat Customers
+    // Format: #,0
+    MEASURE 'fact_orders'[Repeat Customers] =
+        COUNTROWS(FILTER(VALUES(dim_customer[customer_unique_id]), CALCULATE([Delivered Orders]) >= 2))
+
+    // 05 Customers | Customers with at least two delivered orders in current filter context / customers with at least one. Not cohort-adjusted retention.
+    // Format: 0.00%
+    MEASURE 'fact_orders'[Repeat Customer %] =
+        DIVIDE([Repeat Customers], [Delivered Customers])
+
+    // 05 Customers | Delivered customers in current filters, grouped by static RFM snapshot segment.
+    // Format: #,0
+    MEASURE 'fact_orders'[Customers by RFM Segment] =
+        [Delivered Customers]
+
+    // 01 Core | Revenue Share of Top 10 Categories
+    // Format: 0.0%
+    MEASURE 'fact_orders'[Revenue Share of Top 10 Categories] =
+        VAR CategoryRevenue = ADDCOLUMNS(ALLSELECTED(dim_product[category]), "@Revenue", CALCULATE([Total Revenue]))
+        VAR TopCategories = TOPN(10, CategoryRevenue, [@Revenue], DESC, dim_product[category], ASC)
+        RETURN DIVIDE(SUMX(TopCategories, [@Revenue]), SUMX(CategoryRevenue, [@Revenue]))
+
+    // 01 Core | Top 10 Category Revenue
+    // Format: "R$" #,0.00;("R$" #,0.00);"R$" 0.00
+    MEASURE 'fact_orders'[Top 10 Category Revenue] =
+        VAR RankedCategories = ADDCOLUMNS(ALLSELECTED(dim_product[category]), "@Revenue", CALCULATE([Total Revenue]))
+        VAR TopCategories = TOPN(10, RankedCategories, [@Revenue], DESC, dim_product[category], ASC)
+        RETURN CALCULATE([Total Revenue], KEEPFILTERS(TopCategories))
+
+    // 06 Scenario | Disconnected what-if table, 0 to 100% in 5-point increments, default 50%.
+    // Format: 0%
+    MEASURE 'fact_orders'[Late Reduction % Value] =
+        SELECTEDVALUE('Late Reduction %'[Value], 0.50)
+
+    // 06 Scenario | Late Orders Avoided
+    // Format: #,0
+    MEASURE 'fact_orders'[Late Orders Avoided] =
+        VAR Reduction = [Late Reduction % Value]
+        RETURN [Late Orders] * Reduction
+
+    // 06 Scenario | Requested scenario extrapolates reviewed cohort rates to all late orders. Expected count, not a guaranteed outcome.
+    // Format: #,0
+    MEASURE 'fact_orders'[Low Reviews Avoided] =
+        VAR Gap = [Low Review % (Late)] - [Low Review % (On-time)]
+        RETURN IF([Late Reviewed Orders]>0 && [On-time Reviewed Orders]>0, [Late Orders Avoided] * Gap)
+
+    // 06 Scenario | Reassigns selected share of reviewed late orders to observed on-time mean; keeps review volume fixed. Associational scenario.
+    // Format: 0.00
+    MEASURE 'fact_orders'[Projected Avg Rating] =
+        VAR ReviewedLateShifted = [Late Reviewed Orders] * [Late Reduction % Value]
+        VAR RatingUplift = [Avg Rating (On-time)] - [Avg Rating (Late)]
+        VAR Baseline = [Avg Review Score]
+        RETURN IF([Late Reviewed Orders]>0 && [On-time Reviewed Orders]>0,
+            MIN(5, MAX(1, Baseline + DIVIDE(ReviewedLateShifted * RatingUplift, [Delivered Reviewed Orders]))))
+
+    // 06 Scenario | Scenario Rating
+    // Format: 0.00
+    MEASURE 'fact_orders'[Scenario Rating] =
+        SWITCH(SELECTEDVALUE(Scenario[Scenario]), "Before", [Avg Review Score], "After", [Projected Avg Rating])
+
+    // 06 Scenario | Scenario Late Orders
+    // Format: #,0
+    MEASURE 'fact_orders'[Scenario Late Orders] =
+        SWITCH(SELECTEDVALUE(Scenario[Scenario]), "Before", [Late Orders], "After", [Late Orders]-[Late Orders Avoided])
+
+    // 07 Narrative | Delivery Insight
+    // Format: General
+    MEASURE 'fact_orders'[Delivery Insight] =
+        VAR LateRate = [Low Review % (Late)]
+        VAR OnTimeRate = [Low Review % (On-time)]
+        RETURN IF(ISBLANK(LateRate) || ISBLANK(OnTimeRate), "Insufficient reviewed orders for a cohort comparison",
+        "Late deliveries receive 1–2 star reviews " & FORMAT(LateRate,"0.0%") & " of the time vs " & FORMAT(OnTimeRate,"0.0%") & " on-time")
+
+    // 07 Narrative | Executive Insight
+    // Format: General
+    MEASURE 'fact_orders'[Executive Insight] =
+        "Top 10 categories generate " & FORMAT([Revenue Share of Top 10 Categories],"0.0%") & " of gross sales. Prioritize delivery reliability in these categories."
+
+    // 07 Narrative | Scenario Insight
+    // Format: General
+    MEASURE 'fact_orders'[Scenario Insight] =
+        "Illustrative scenario: " & FORMAT([Late Reduction % Value],"0%") & " fewer late orders. Observed cohort differences are associations, not causal effects."
+
+    // 07 Narrative | Retention Insight
+    // Format: General
+    MEASURE 'fact_orders'[Retention Insight] =
+        "Only " & FORMAT([Repeat Customer %],"0.0%") & " of delivered customers purchased again within the selected observation window."
+
+EVALUATE
+    ROW("Orders", [Orders], "Total Revenue", [Total Revenue], "Late Delivery %", [Late Delivery %], "Avg Review Score", [Avg Review Score])
