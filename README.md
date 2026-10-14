@@ -1,6 +1,6 @@
 # CommerceLens — E-Commerce Revenue & Retention Analytics
 
-**Live dashboard:** [commercelens.streamlit.app](https://commercelens.streamlit.app/)
+**Power BI dashboard:** [`powerbi/CommerceLens.pbip`](#power-bi-dashboard) · **Live Streamlit demo:** [commercelens.streamlit.app](https://commercelens.streamlit.app/)
 
 > **Problem:** A Brazilian marketplace (Olist, ~100k orders) needs to know where its revenue comes from and what drives customer satisfaction and repeat purchases.
 > **Key finding:** Late delivery is the dominant driver of bad reviews. Late orders are 6.7% of orders but get 1-2★ reviews 62.4% of the time (vs 9.3% on time), and lateness is concentrated in specific regions such as RJ, not in specific sellers. Freight price barely matters once delivery is on time.
@@ -105,7 +105,59 @@ Repeat purchase is too rare and too weakly predictable to act on, which fits Lay
 
 ---
 
+## Power BI Dashboard
+
+`powerbi/CommerceLens.pbip` is a Power BI Project (PBIP) built on an import-mode star schema: two fact tables (`fact_orders`, `fact_order_items`), five dimensions (`dim_customer`, `dim_product`, `dim_seller`, `dim_state`, `dim_date`), six single-direction one-to-many relationships and 41 DAX measures. All cleaning runs once in Python (`powerbi/export_star_schema.py`), so each Power Query table only reads its CSV, promotes headers and sets types.
+
+| Executive Summary | Delivery & Reviews |
+|---|---|
+| ![Executive Summary](powerbi/screenshots/page1.jpeg) | ![Delivery & Reviews](powerbi/screenshots/page2.jpeg) |
+| **Scenario Simulator** | **Customers & Geography** |
+| ![Scenario Simulator](powerbi/screenshots/page3.jpeg) | ![Customers & Geography](powerbi/screenshots/page4.jpeg) |
+
+**Pages**
+1. **Executive Summary**: gross revenue, orders, AOV, delivered rating and late share; monthly revenue trend; top 10 categories.
+2. **Delivery & Reviews**: review mix and 1-2★ share for late vs on-time orders, delay histogram, state map, low-review breakdown.
+3. **Scenario Simulator**: "what if late deliveries fell by X%" slider with late orders avoided, low reviews avoided and projected rating.
+4. **Customers & Geography**: RFM segments, revenue by customer state, repeat purchase rate, seller contribution table.
+
+Two hidden pages support the report: a drill-through page (State & Category Detail) and a report tooltip (Revenue & delivery context). Date, state, category and status slicers are synced across pages.
+
+**Key findings** (numbers from `powerbi/validation/source_results.json`, an independent pandas reconciliation of the raw CSVs that matches the report):
+
+| Metric | Value |
+|---|---|
+| Orders, all statuses / delivered | 99,441 / 96,478 |
+| Gross revenue (item price + freight, all statuses) | R$ 15,843,553.24 |
+| Average order value (gross revenue / all orders) | R$ 159.33 |
+| Average rating, delivered and reviewed orders | 4.16 |
+| Late share of delivered orders with both dates | 6.77% (6,534 of 96,470) |
+| 1-2★ share: late vs on-time orders | 62.42% vs 9.27% (gap 53.15 pp) |
+| Repeat customers (2+ delivered orders) | 3.00% (2,801 of 93,358) |
+| Top 10 categories' share of gross revenue | 62.32% (largest: health_beauty, R$ 1,441,248.07) |
+| Scenario: 50% fewer late orders | 3,267 late orders avoided, about 1,736 low reviews avoided, projected rating 4.22 |
+
+Revenue here includes freight and all order statuses, so it differs from the delivered, item-price-only revenue in [Results](#results). The scenario applies observed cohort rates; it is an association, not a causal forecast.
+
+**Open the report**
+1. Install [Power BI Desktop](https://www.microsoft.com/power-bi/desktop) (Windows).
+2. In *File > Options and settings > Options > Preview features*, enable **Power BI Project (.pbip) save option** and **Store reports using enhanced metadata format (PBIR)**, then restart Desktop.
+3. Open `powerbi/CommerceLens.pbip`.
+4. Set the data path: *Home > Transform data > Edit parameters > **DataFolder***, enter the full path of your `powerbi\data` folder (default `C:\CommerceLens\powerbi\data`), then **Refresh**.
+5. For the state map, enable *Options > Global > Security > Use Map and Filled Map visuals*.
+
+**Regenerate the data.** The star-schema CSVs in `powerbi/data/` are committed, so the report refreshes right after cloning. To rebuild them from the raw Olist CSVs (see [Setup & run](#setup--run), step 2):
+
+```powershell
+python powerbi/export_star_schema.py      # raw CSVs in repo root -> powerbi/data/*.csv, with key checks
+python powerbi/build_commercelens.py      # independent reconciliation -> powerbi/validation/source_results.json
+```
+
+Model details, business definitions and the C01–C16 cleaning rules are in [`powerbi/DOCUMENTATION.md`](powerbi/DOCUMENTATION.md); all measures are in [`powerbi/measures.dax`](powerbi/measures.dax).
+
 ## Dashboard
+
+The Streamlit app remains available as a secondary demo at [commercelens.streamlit.app](https://commercelens.streamlit.app/).
 
 `dashboard/app.py` is a Streamlit app with a Material 3-style interface: sidebar navigation, elevated cards, and KPI cards with sparklines. It has six pages (Overview, Revenue, Customers & RFM, Satisfaction drivers, Risk model, Findings), and each page has its own link (`?page=model`).
 
@@ -138,6 +190,11 @@ scripts/build_dashboard_data.py  CSVs -> dashboard/data/*.parquet
 dashboard/app.py               Streamlit app (+ slim requirements.txt for deployment)
 .streamlit/config.toml         dashboard theme
 docs/powerbi_notes.md          Power BI rebuild guide
+powerbi/CommerceLens.pbip      Power BI project (report + semantic model folders)
+powerbi/export_star_schema.py  raw CSVs -> powerbi/data/ star-schema CSVs
+powerbi/data/                  star-schema CSVs loaded by the Power BI model
+powerbi/measures.dax           all DAX measures (pasteable into DAX query view)
+powerbi/screenshots/           rendered report pages
 ```
 
 ## Tech stack
@@ -183,4 +240,4 @@ If script activation is blocked, run `Set-ExecutionPolicy -Scope CurrentUser Rem
 
 ## Data & license
 
-The data is the [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) by Olist, published on Kaggle under **CC BY-NC-SA 4.0**. The raw CSVs are not redistributed in this repo (they are gitignored). The committed `dashboard/data/*.parquet` files are small aggregates derived from the dataset under the same license terms.
+The data is the [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) by Olist, published on Kaggle under **CC BY-NC-SA 4.0**. The raw CSVs are not redistributed in this repo (they are gitignored). The committed `dashboard/data/*.parquet` files are small aggregates derived from the dataset under the same license terms. The committed `powerbi/data/*.csv` files are cleaned, row-level star-schema tables derived from the dataset (Olist's anonymised IDs; geolocation reduced to one point per state) and are shared under the same CC BY-NC-SA 4.0 terms.
