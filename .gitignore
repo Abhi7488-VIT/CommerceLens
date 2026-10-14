@@ -19,3 +19,12 @@ CLAUDE.md
 Thumbs.db
 
 # NOTE: dashboard/data/*.parquet is intentionally tracked (small, pre-aggregated).
+
+# Power BI Desktop local state (per-user settings and data cache)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Misc
+*.tmp
+.pytest_cache/
+.claude/settings.local.json
