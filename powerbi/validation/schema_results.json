@@ -1,0 +1,394 @@
+[
+  {
+    "file": "CommerceLens.Report\\definition\\bookmarks\\bookmarks.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\bookmarks\\Reset.bookmark.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Brand\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\CustomersCount\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Footer\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Insight\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Customers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Delivery\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Executive\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Scenario\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Repeat\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Reset\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\RevenueState\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\RFM\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\SegmentCounts\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Subtitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_category\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_date\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_state\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_status\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\TopSellers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Brand\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\DelayHistogram\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Drivers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Footer\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Insight\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\LowReviewCompare\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Customers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Delivery\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Executive\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Scenario\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Reset\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\ReviewDistribution\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\StateMap\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Subtitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_category\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_date\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_state\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_status\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Detail\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\Back\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\DetailTable\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\DetailTitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Brand\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Footer\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Insight\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI0\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI1\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI2\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI3\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI4\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Customers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Delivery\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Executive\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Scenario\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Reset\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\RevenueTrend\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Subtitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_category\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_date\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_state\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_status\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\TopCategories\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\pages.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\BeforeAfter\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Brand\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Footer\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Insight\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\LateBeforeAfter\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Customers\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Delivery\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Executive\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Scenario\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Reduction\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Reset\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI0\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI1\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI2\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Subtitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_category\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_date\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_state\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_status\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\page.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip0\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip1\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip2\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip3\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\TipTitle\\visual.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\report.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition\\version.json",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.Report\\definition.pbir",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.pbip",
+    "result": "PASS"
+  },
+  {
+    "file": "CommerceLens.SemanticModel\\definition.pbism",
+    "result": "PASS"
+  }
+]

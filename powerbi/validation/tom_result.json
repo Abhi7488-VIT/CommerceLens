@@ -1,0 +1,6 @@
+﻿{
+    "scope":  "Microsoft TOM deserialization only; M refresh and DAX execution pending",
+    "tables":  10,
+    "result":  "PASS",
+    "relationships":  6
+}

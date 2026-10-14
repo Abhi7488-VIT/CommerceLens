@@ -1,0 +1,1022 @@
+{
+  "Executive": [
+    {
+      "name": "Brand",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 22,
+        "z": 0,
+        "width": 280,
+        "height": 38,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "nav_Executive",
+      "type": "actionButton",
+      "position": {
+        "x": 570,
+        "y": 26,
+        "z": 1,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "nav_Delivery",
+      "type": "actionButton",
+      "position": {
+        "x": 718,
+        "y": 26,
+        "z": 2,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 2
+      }
+    },
+    {
+      "name": "nav_Scenario",
+      "type": "actionButton",
+      "position": {
+        "x": 866,
+        "y": 26,
+        "z": 3,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 3
+      }
+    },
+    {
+      "name": "nav_Customers",
+      "type": "actionButton",
+      "position": {
+        "x": 1014,
+        "y": 26,
+        "z": 4,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 4
+      }
+    },
+    {
+      "name": "Reset",
+      "type": "actionButton",
+      "position": {
+        "x": 1168,
+        "y": 26,
+        "z": 5,
+        "width": 90,
+        "height": 30,
+        "tabOrder": 5
+      }
+    },
+    {
+      "name": "Subtitle",
+      "type": "textbox",
+      "position": {
+        "x": 30,
+        "y": 61,
+        "z": 6,
+        "width": 1000,
+        "height": 24,
+        "tabOrder": 6
+      }
+    },
+    {
+      "name": "sync_date",
+      "type": "slicer",
+      "position": {
+        "x": 28,
+        "y": 92,
+        "z": 7,
+        "width": 330,
+        "height": 58,
+        "tabOrder": 7
+      }
+    },
+    {
+      "name": "sync_state",
+      "type": "slicer",
+      "position": {
+        "x": 374,
+        "y": 92,
+        "z": 8,
+        "width": 220,
+        "height": 58,
+        "tabOrder": 8
+      }
+    },
+    {
+      "name": "sync_category",
+      "type": "slicer",
+      "position": {
+        "x": 610,
+        "y": 92,
+        "z": 9,
+        "width": 370,
+        "height": 58,
+        "tabOrder": 9
+      }
+    },
+    {
+      "name": "sync_status",
+      "type": "slicer",
+      "position": {
+        "x": 996,
+        "y": 92,
+        "z": 10,
+        "width": 256,
+        "height": 58,
+        "tabOrder": 10
+      }
+    },
+    {
+      "name": "Footer",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 690,
+        "z": 11,
+        "width": 1224,
+        "height": 22,
+        "tabOrder": 11
+      }
+    },
+    {
+      "name": "KPI0",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 170,
+        "z": 12,
+        "width": 232,
+        "height": 110,
+        "tabOrder": 12
+      }
+    },
+    {
+      "name": "KPI1",
+      "type": "card",
+      "position": {
+        "x": 276,
+        "y": 170,
+        "z": 13,
+        "width": 232,
+        "height": 110,
+        "tabOrder": 13
+      }
+    },
+    {
+      "name": "KPI2",
+      "type": "card",
+      "position": {
+        "x": 524,
+        "y": 170,
+        "z": 14,
+        "width": 232,
+        "height": 110,
+        "tabOrder": 14
+      }
+    },
+    {
+      "name": "KPI3",
+      "type": "card",
+      "position": {
+        "x": 772,
+        "y": 170,
+        "z": 15,
+        "width": 232,
+        "height": 110,
+        "tabOrder": 15
+      }
+    },
+    {
+      "name": "KPI4",
+      "type": "card",
+      "position": {
+        "x": 1020,
+        "y": 170,
+        "z": 16,
+        "width": 232,
+        "height": 110,
+        "tabOrder": 16
+      }
+    },
+    {
+      "name": "RevenueTrend",
+      "type": "lineChart",
+      "position": {
+        "x": 28,
+        "y": 300,
+        "z": 17,
+        "width": 700,
+        "height": 310,
+        "tabOrder": 17
+      }
+    },
+    {
+      "name": "TopCategories",
+      "type": "clusteredBarChart",
+      "position": {
+        "x": 748,
+        "y": 300,
+        "z": 18,
+        "width": 504,
+        "height": 310,
+        "tabOrder": 18
+      }
+    },
+    {
+      "name": "Insight",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 627,
+        "z": 19,
+        "width": 1224,
+        "height": 51,
+        "tabOrder": 19
+      }
+    }
+  ],
+  "Delivery": [
+    {
+      "name": "Brand",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 22,
+        "z": 0,
+        "width": 280,
+        "height": 38,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "nav_Executive",
+      "type": "actionButton",
+      "position": {
+        "x": 570,
+        "y": 26,
+        "z": 1,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "nav_Delivery",
+      "type": "actionButton",
+      "position": {
+        "x": 718,
+        "y": 26,
+        "z": 2,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 2
+      }
+    },
+    {
+      "name": "nav_Scenario",
+      "type": "actionButton",
+      "position": {
+        "x": 866,
+        "y": 26,
+        "z": 3,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 3
+      }
+    },
+    {
+      "name": "nav_Customers",
+      "type": "actionButton",
+      "position": {
+        "x": 1014,
+        "y": 26,
+        "z": 4,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 4
+      }
+    },
+    {
+      "name": "Reset",
+      "type": "actionButton",
+      "position": {
+        "x": 1168,
+        "y": 26,
+        "z": 5,
+        "width": 90,
+        "height": 30,
+        "tabOrder": 5
+      }
+    },
+    {
+      "name": "Subtitle",
+      "type": "textbox",
+      "position": {
+        "x": 30,
+        "y": 61,
+        "z": 6,
+        "width": 1000,
+        "height": 24,
+        "tabOrder": 6
+      }
+    },
+    {
+      "name": "sync_date",
+      "type": "slicer",
+      "position": {
+        "x": 28,
+        "y": 92,
+        "z": 7,
+        "width": 330,
+        "height": 58,
+        "tabOrder": 7
+      }
+    },
+    {
+      "name": "sync_state",
+      "type": "slicer",
+      "position": {
+        "x": 374,
+        "y": 92,
+        "z": 8,
+        "width": 220,
+        "height": 58,
+        "tabOrder": 8
+      }
+    },
+    {
+      "name": "sync_category",
+      "type": "slicer",
+      "position": {
+        "x": 610,
+        "y": 92,
+        "z": 9,
+        "width": 370,
+        "height": 58,
+        "tabOrder": 9
+      }
+    },
+    {
+      "name": "sync_status",
+      "type": "slicer",
+      "position": {
+        "x": 996,
+        "y": 92,
+        "z": 10,
+        "width": 256,
+        "height": 58,
+        "tabOrder": 10
+      }
+    },
+    {
+      "name": "Footer",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 690,
+        "z": 11,
+        "width": 1224,
+        "height": 22,
+        "tabOrder": 11
+      }
+    },
+    {
+      "name": "Insight",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 166,
+        "z": 12,
+        "width": 1224,
+        "height": 58,
+        "tabOrder": 12
+      }
+    },
+    {
+      "name": "ReviewDistribution",
+      "type": "hundredPercentStackedColumnChart",
+      "position": {
+        "x": 28,
+        "y": 240,
+        "z": 13,
+        "width": 390,
+        "height": 200,
+        "tabOrder": 13
+      }
+    },
+    {
+      "name": "LowReviewCompare",
+      "type": "clusteredBarChart",
+      "position": {
+        "x": 438,
+        "y": 240,
+        "z": 14,
+        "width": 390,
+        "height": 200,
+        "tabOrder": 14
+      }
+    },
+    {
+      "name": "StateMap",
+      "type": "map",
+      "position": {
+        "x": 848,
+        "y": 240,
+        "z": 15,
+        "width": 404,
+        "height": 200,
+        "tabOrder": 15
+      }
+    },
+    {
+      "name": "DelayHistogram",
+      "type": "clusteredColumnChart",
+      "position": {
+        "x": 28,
+        "y": 460,
+        "z": 16,
+        "width": 590,
+        "height": 210,
+        "tabOrder": 16
+      }
+    },
+    {
+      "name": "Drivers",
+      "type": "decompositionTreeVisual",
+      "position": {
+        "x": 638,
+        "y": 460,
+        "z": 17,
+        "width": 614,
+        "height": 210,
+        "tabOrder": 17
+      }
+    }
+  ],
+  "Scenario": [
+    {
+      "name": "Brand",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 22,
+        "z": 0,
+        "width": 280,
+        "height": 38,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "nav_Executive",
+      "type": "actionButton",
+      "position": {
+        "x": 570,
+        "y": 26,
+        "z": 1,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "nav_Delivery",
+      "type": "actionButton",
+      "position": {
+        "x": 718,
+        "y": 26,
+        "z": 2,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 2
+      }
+    },
+    {
+      "name": "nav_Scenario",
+      "type": "actionButton",
+      "position": {
+        "x": 866,
+        "y": 26,
+        "z": 3,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 3
+      }
+    },
+    {
+      "name": "nav_Customers",
+      "type": "actionButton",
+      "position": {
+        "x": 1014,
+        "y": 26,
+        "z": 4,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 4
+      }
+    },
+    {
+      "name": "Reset",
+      "type": "actionButton",
+      "position": {
+        "x": 1168,
+        "y": 26,
+        "z": 5,
+        "width": 90,
+        "height": 30,
+        "tabOrder": 5
+      }
+    },
+    {
+      "name": "Subtitle",
+      "type": "textbox",
+      "position": {
+        "x": 30,
+        "y": 61,
+        "z": 6,
+        "width": 1000,
+        "height": 24,
+        "tabOrder": 6
+      }
+    },
+    {
+      "name": "sync_date",
+      "type": "slicer",
+      "position": {
+        "x": 28,
+        "y": 92,
+        "z": 7,
+        "width": 330,
+        "height": 58,
+        "tabOrder": 7
+      }
+    },
+    {
+      "name": "sync_state",
+      "type": "slicer",
+      "position": {
+        "x": 374,
+        "y": 92,
+        "z": 8,
+        "width": 220,
+        "height": 58,
+        "tabOrder": 8
+      }
+    },
+    {
+      "name": "sync_category",
+      "type": "slicer",
+      "position": {
+        "x": 610,
+        "y": 92,
+        "z": 9,
+        "width": 370,
+        "height": 58,
+        "tabOrder": 9
+      }
+    },
+    {
+      "name": "sync_status",
+      "type": "slicer",
+      "position": {
+        "x": 996,
+        "y": 92,
+        "z": 10,
+        "width": 256,
+        "height": 58,
+        "tabOrder": 10
+      }
+    },
+    {
+      "name": "Footer",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 690,
+        "z": 11,
+        "width": 1224,
+        "height": 22,
+        "tabOrder": 11
+      }
+    },
+    {
+      "name": "Insight",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 166,
+        "z": 12,
+        "width": 1224,
+        "height": 58,
+        "tabOrder": 12
+      }
+    },
+    {
+      "name": "Reduction",
+      "type": "slicer",
+      "position": {
+        "x": 28,
+        "y": 244,
+        "z": 13,
+        "width": 1224,
+        "height": 96,
+        "tabOrder": 13
+      }
+    },
+    {
+      "name": "ScenarioKPI0",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 360,
+        "z": 14,
+        "width": 394,
+        "height": 108,
+        "tabOrder": 14
+      }
+    },
+    {
+      "name": "ScenarioKPI1",
+      "type": "card",
+      "position": {
+        "x": 442,
+        "y": 360,
+        "z": 15,
+        "width": 394,
+        "height": 108,
+        "tabOrder": 15
+      }
+    },
+    {
+      "name": "ScenarioKPI2",
+      "type": "card",
+      "position": {
+        "x": 856,
+        "y": 360,
+        "z": 16,
+        "width": 394,
+        "height": 108,
+        "tabOrder": 16
+      }
+    },
+    {
+      "name": "BeforeAfter",
+      "type": "clusteredColumnChart",
+      "position": {
+        "x": 28,
+        "y": 488,
+        "z": 17,
+        "width": 590,
+        "height": 182,
+        "tabOrder": 17
+      }
+    },
+    {
+      "name": "LateBeforeAfter",
+      "type": "clusteredBarChart",
+      "position": {
+        "x": 638,
+        "y": 488,
+        "z": 18,
+        "width": 614,
+        "height": 182,
+        "tabOrder": 18
+      }
+    }
+  ],
+  "Customers": [
+    {
+      "name": "Brand",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 22,
+        "z": 0,
+        "width": 280,
+        "height": 38,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "nav_Executive",
+      "type": "actionButton",
+      "position": {
+        "x": 570,
+        "y": 26,
+        "z": 1,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "nav_Delivery",
+      "type": "actionButton",
+      "position": {
+        "x": 718,
+        "y": 26,
+        "z": 2,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 2
+      }
+    },
+    {
+      "name": "nav_Scenario",
+      "type": "actionButton",
+      "position": {
+        "x": 866,
+        "y": 26,
+        "z": 3,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 3
+      }
+    },
+    {
+      "name": "nav_Customers",
+      "type": "actionButton",
+      "position": {
+        "x": 1014,
+        "y": 26,
+        "z": 4,
+        "width": 140,
+        "height": 30,
+        "tabOrder": 4
+      }
+    },
+    {
+      "name": "Reset",
+      "type": "actionButton",
+      "position": {
+        "x": 1168,
+        "y": 26,
+        "z": 5,
+        "width": 90,
+        "height": 30,
+        "tabOrder": 5
+      }
+    },
+    {
+      "name": "Subtitle",
+      "type": "textbox",
+      "position": {
+        "x": 30,
+        "y": 61,
+        "z": 6,
+        "width": 1000,
+        "height": 24,
+        "tabOrder": 6
+      }
+    },
+    {
+      "name": "sync_date",
+      "type": "slicer",
+      "position": {
+        "x": 28,
+        "y": 92,
+        "z": 7,
+        "width": 330,
+        "height": 58,
+        "tabOrder": 7
+      }
+    },
+    {
+      "name": "sync_state",
+      "type": "slicer",
+      "position": {
+        "x": 374,
+        "y": 92,
+        "z": 8,
+        "width": 220,
+        "height": 58,
+        "tabOrder": 8
+      }
+    },
+    {
+      "name": "sync_category",
+      "type": "slicer",
+      "position": {
+        "x": 610,
+        "y": 92,
+        "z": 9,
+        "width": 370,
+        "height": 58,
+        "tabOrder": 9
+      }
+    },
+    {
+      "name": "sync_status",
+      "type": "slicer",
+      "position": {
+        "x": 996,
+        "y": 92,
+        "z": 10,
+        "width": 256,
+        "height": 58,
+        "tabOrder": 10
+      }
+    },
+    {
+      "name": "Footer",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 690,
+        "z": 11,
+        "width": 1224,
+        "height": 22,
+        "tabOrder": 11
+      }
+    },
+    {
+      "name": "Insight",
+      "type": "card",
+      "position": {
+        "x": 28,
+        "y": 166,
+        "z": 12,
+        "width": 1224,
+        "height": 58,
+        "tabOrder": 12
+      }
+    },
+    {
+      "name": "RFM",
+      "type": "donutChart",
+      "position": {
+        "x": 28,
+        "y": 240,
+        "z": 13,
+        "width": 390,
+        "height": 215,
+        "tabOrder": 13
+      }
+    },
+    {
+      "name": "RevenueState",
+      "type": "clusteredBarChart",
+      "position": {
+        "x": 438,
+        "y": 240,
+        "z": 14,
+        "width": 514,
+        "height": 215,
+        "tabOrder": 14
+      }
+    },
+    {
+      "name": "Repeat",
+      "type": "card",
+      "position": {
+        "x": 972,
+        "y": 240,
+        "z": 15,
+        "width": 280,
+        "height": 100,
+        "tabOrder": 15
+      }
+    },
+    {
+      "name": "CustomersCount",
+      "type": "card",
+      "position": {
+        "x": 972,
+        "y": 355,
+        "z": 16,
+        "width": 280,
+        "height": 100,
+        "tabOrder": 16
+      }
+    },
+    {
+      "name": "SegmentCounts",
+      "type": "clusteredBarChart",
+      "position": {
+        "x": 28,
+        "y": 475,
+        "z": 17,
+        "width": 490,
+        "height": 195,
+        "tabOrder": 17
+      }
+    },
+    {
+      "name": "TopSellers",
+      "type": "tableEx",
+      "position": {
+        "x": 538,
+        "y": 475,
+        "z": 18,
+        "width": 714,
+        "height": 195,
+        "tabOrder": 18
+      }
+    }
+  ],
+  "Tooltip": [
+    {
+      "name": "TipTitle",
+      "type": "textbox",
+      "position": {
+        "x": 18,
+        "y": 12,
+        "z": 0,
+        "width": 444,
+        "height": 32,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "Tip0",
+      "type": "card",
+      "position": {
+        "x": 18,
+        "y": 58,
+        "z": 1,
+        "width": 212,
+        "height": 100,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "Tip1",
+      "type": "card",
+      "position": {
+        "x": 250,
+        "y": 58,
+        "z": 2,
+        "width": 212,
+        "height": 100,
+        "tabOrder": 2
+      }
+    },
+    {
+      "name": "Tip2",
+      "type": "card",
+      "position": {
+        "x": 18,
+        "y": 176,
+        "z": 3,
+        "width": 212,
+        "height": 100,
+        "tabOrder": 3
+      }
+    },
+    {
+      "name": "Tip3",
+      "type": "card",
+      "position": {
+        "x": 250,
+        "y": 176,
+        "z": 4,
+        "width": 212,
+        "height": 100,
+        "tabOrder": 4
+      }
+    }
+  ],
+  "Detail": [
+    {
+      "name": "DetailTitle",
+      "type": "textbox",
+      "position": {
+        "x": 28,
+        "y": 25,
+        "z": 0,
+        "width": 950,
+        "height": 48,
+        "tabOrder": 0
+      }
+    },
+    {
+      "name": "Back",
+      "type": "actionButton",
+      "position": {
+        "x": 1090,
+        "y": 26,
+        "z": 1,
+        "width": 160,
+        "height": 30,
+        "tabOrder": 1
+      }
+    },
+    {
+      "name": "DetailTable",
+      "type": "tableEx",
+      "position": {
+        "x": 28,
+        "y": 100,
+        "z": 2,
+        "width": 1224,
+        "height": 565,
+        "tabOrder": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "CommerceLens Consulting",
+  "dataColors": [
+    "#15354B",
+    "#087F8C",
+    "#E6B422",
+    "#627988",
+    "#ABC0C8"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#203440",
+  "tableAccent": "#087F8C",
+  "good": "#087F8C",
+  "neutral": "#E6B422",
+  "bad": "#15354B",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 14,
+      "color": "#203440"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#526572"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 30,
+      "color": "#15354B"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12,
+      "color": "#203440"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontFamily": "Segoe UI",
+            "fontSize": 12,
+            "color": {
+              "solid": {
+                "color": "#203440"
+              }
+            }
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ]
+      }
+    }
+  }
+}

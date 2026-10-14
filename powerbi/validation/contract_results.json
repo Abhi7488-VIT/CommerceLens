@@ -1,0 +1,1374 @@
+[
+  {
+    "check": "Single-direction one-to-many relationships",
+    "result": "PASS",
+    "detail": 6
+  },
+  {
+    "check": "Relationship binding 79b81b99-df86-5763-9c9d-cb91b8bb7173 from",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Relationship binding 79b81b99-df86-5763-9c9d-cb91b8bb7173 to",
+    "result": "PASS",
+    "detail": "dim_customer"
+  },
+  {
+    "check": "Relationship binding 0425ee73-f10d-58b0-b302-3ee17ac13ca7 from",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Relationship binding 0425ee73-f10d-58b0-b302-3ee17ac13ca7 to",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "Relationship binding 71f8f81a-2d22-5f79-ae4b-8f2c6ad9352b from",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Relationship binding 71f8f81a-2d22-5f79-ae4b-8f2c6ad9352b to",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "Relationship binding 7dab1d47-271b-54e4-9053-a9a591b2e4c6 from",
+    "result": "PASS",
+    "detail": "fact_order_items"
+  },
+  {
+    "check": "Relationship binding 7dab1d47-271b-54e4-9053-a9a591b2e4c6 to",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Relationship binding 285061db-d55b-56dc-9096-ef18f724ee9a from",
+    "result": "PASS",
+    "detail": "fact_order_items"
+  },
+  {
+    "check": "Relationship binding 285061db-d55b-56dc-9096-ef18f724ee9a to",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "Relationship binding 670302a5-0d30-50e7-94a2-f445f214658e from",
+    "result": "PASS",
+    "detail": "fact_order_items"
+  },
+  {
+    "check": "Relationship binding 670302a5-0d30-50e7-94a2-f445f214658e to",
+    "result": "PASS",
+    "detail": "dim_seller"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Brand\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Brand accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\CustomersCount\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "CustomersCount accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CustomersCount Values Delivered Customers",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Footer\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Footer accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Insight\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Insight accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Insight Values Retention Insight",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Customers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Customers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Delivery\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Delivery accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Executive\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Executive accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\nav_Scenario\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Scenario accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Repeat\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Repeat accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Repeat Values Repeat Customer %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Reset\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Reset accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\RevenueState\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "RevenueState accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "RevenueState Category state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "RevenueState Y Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\RFM\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "RFM accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "RFM Category rfm_segment",
+    "result": "PASS",
+    "detail": "dim_customer"
+  },
+  {
+    "check": "RFM Y Customers by RFM Segment",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\SegmentCounts\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "SegmentCounts accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "SegmentCounts Category rfm_segment",
+    "result": "PASS",
+    "detail": "dim_customer"
+  },
+  {
+    "check": "SegmentCounts Y Customers by RFM Segment",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\Subtitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Subtitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_category\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_category accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_category Values category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_date\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_date accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_date Values Date",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_state\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_state accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_state Values state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\sync_status\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_status accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_status Values order_status",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Customers\\visuals\\TopSellers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "TopSellers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "TopSellers Values seller_id",
+    "result": "PASS",
+    "detail": "dim_seller"
+  },
+  {
+    "check": "TopSellers Values seller_state",
+    "result": "PASS",
+    "detail": "dim_seller"
+  },
+  {
+    "check": "TopSellers Values Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "TopSellers Values Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "TopSellers Values Late Delivery %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Brand\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Brand accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\DelayHistogram\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "DelayHistogram accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "DelayHistogram Category delay_bin",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DelayHistogram Y Delivery Eligible Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Drivers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Drivers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Drivers Analyze Low Review %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Drivers ExplainBy delivery_group",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "Drivers ExplainBy state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "Drivers ExplainBy category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Footer\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Footer accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Insight\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Insight accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Insight Values Delivery Insight",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\LowReviewCompare\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "LowReviewCompare accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "LowReviewCompare Category delivery_group",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "LowReviewCompare Y Low Review %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Customers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Customers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Delivery\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Delivery accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Executive\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Executive accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\nav_Scenario\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Scenario accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Reset\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Reset accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\ReviewDistribution\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "ReviewDistribution accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "ReviewDistribution Category delivery_group",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "ReviewDistribution Series review_score",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "ReviewDistribution Y Delivered Reviewed Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\StateMap\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "StateMap accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "StateMap Category state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "StateMap Y latitude",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "StateMap X longitude",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "StateMap Size Late Delivery %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "StateMap Tooltips Late Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "StateMap Tooltips Delivery Eligible Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\Subtitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Subtitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_category\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_category accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_category Values category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_date\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_date accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_date Values Date",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_state\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_state accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_state Values state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Delivery\\visuals\\sync_status\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_status accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_status Values order_status",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\Back\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Back accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\DetailTable\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "DetailTable accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "DetailTable Values order_id",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DetailTable Values state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "DetailTable Values order_status",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DetailTable Values purchase_date",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DetailTable Values Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DetailTable Values Avg Review Score",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "DetailTable Values Late Delivery %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Detail\\visuals\\DetailTitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "DetailTitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Brand\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Brand accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Footer\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Footer accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Insight\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Insight accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Insight Values Executive Insight",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI0\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "KPI0 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "KPI0 Values Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI1\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "KPI1 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "KPI1 Values Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI2\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "KPI2 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "KPI2 Values AOV",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI3\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "KPI3 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "KPI3 Values Avg Review Score",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\KPI4\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "KPI4 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "KPI4 Values Late Delivery %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Customers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Customers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Delivery\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Delivery accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Executive\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Executive accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\nav_Scenario\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Scenario accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Reset\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Reset accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\RevenueTrend\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "RevenueTrend accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "RevenueTrend Category year_month",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "RevenueTrend Y Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "RevenueTrend Tooltips Revenue MoM %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\Subtitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Subtitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_category\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_category accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_category Values category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_date\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_date accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_date Values Date",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_state\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_state accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_state Values state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\sync_status\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_status accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_status Values order_status",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Executive\\visuals\\TopCategories\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "TopCategories accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "TopCategories Category category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "TopCategories Y Top 10 Category Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\BeforeAfter\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "BeforeAfter accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "BeforeAfter Category Scenario",
+    "result": "PASS",
+    "detail": "Scenario"
+  },
+  {
+    "check": "BeforeAfter Y Scenario Rating",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Brand\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Brand accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Footer\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Footer accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Insight\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Insight accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Insight Values Scenario Insight",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\LateBeforeAfter\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "LateBeforeAfter accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "LateBeforeAfter Category Scenario",
+    "result": "PASS",
+    "detail": "Scenario"
+  },
+  {
+    "check": "LateBeforeAfter Y Scenario Late Orders",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Customers\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Customers accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Delivery\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Delivery accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Executive\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Executive accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\nav_Scenario\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "nav_Scenario accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Reduction\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Reduction accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Reduction Values Value",
+    "result": "PASS",
+    "detail": "Late Reduction %"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Reset\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Reset accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI0\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "ScenarioKPI0 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "ScenarioKPI0 Values Late Orders Avoided",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI1\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "ScenarioKPI1 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "ScenarioKPI1 Values Low Reviews Avoided",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\ScenarioKPI2\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "ScenarioKPI2 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "ScenarioKPI2 Values Projected Avg Rating",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\Subtitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Subtitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_category\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_category accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_category Values category",
+    "result": "PASS",
+    "detail": "dim_product"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_date\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_date accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_date Values Date",
+    "result": "PASS",
+    "detail": "dim_date"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_state\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_state accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_state Values state",
+    "result": "PASS",
+    "detail": "dim_state"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Scenario\\visuals\\sync_status\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "sync_status accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "sync_status Values order_status",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip0\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Tip0 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Tip0 Values Total Revenue",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip1\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Tip1 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Tip1 Values Revenue MoM %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip2\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Tip2 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Tip2 Values Late Delivery %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\Tip3\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "Tip3 accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Tip3 Values Low Review %",
+    "result": "PASS",
+    "detail": "fact_orders"
+  },
+  {
+    "check": "CommerceLens.Report\\definition\\pages\\Tooltip\\visuals\\TipTitle\\visual.json bounds",
+    "result": "PASS",
+    "detail": "within canvas"
+  },
+  {
+    "check": "TipTitle accessibility",
+    "result": "PASS",
+    "detail": "alt text and tab order"
+  },
+  {
+    "check": "Non-null unique order_id",
+    "result": "PASS",
+    "detail": 99441
+  },
+  {
+    "check": "Non-null unique customer_id",
+    "result": "PASS",
+    "detail": 99441
+  },
+  {
+    "check": "Non-null unique customer_unique_id",
+    "result": "PASS",
+    "detail": 96096
+  },
+  {
+    "check": "Non-null unique product_id",
+    "result": "PASS",
+    "detail": 32951
+  },
+  {
+    "check": "Non-null unique seller_id",
+    "result": "PASS",
+    "detail": 3095
+  },
+  {
+    "check": "Unique composite order/item key",
+    "result": "PASS",
+    "detail": 112650
+  },
+  {
+    "check": "Calendar keys and fact references",
+    "result": "PASS",
+    "detail": 1096
+  },
+  {
+    "check": "State keys and fact references",
+    "result": "PASS",
+    "detail": 27
+  },
+  {
+    "check": "Customer mapping covers every fact order",
+    "result": "PASS",
+    "detail": 0
+  },
+  {
+    "check": "Source scenario endpoint 0%",
+    "result": "PASS",
+    "detail": {
+      "avoided": 0,
+      "low_reviews": 0.0,
+      "rating": 4.155908256114867
+    }
+  },
+  {
+    "check": "Source scenario endpoint 50%",
+    "result": "PASS",
+    "detail": {
+      "avoided": 3267.0,
+      "low_reviews": 1736.486582128319,
+      "rating": 4.223155905244857
+    }
+  },
+  {
+    "check": "Source scenario endpoint 100%",
+    "result": "PASS",
+    "detail": {
+      "avoided": 6534,
+      "low_reviews": 3472.973164256638,
+      "rating": 4.290403554374847
+    }
+  }
+]

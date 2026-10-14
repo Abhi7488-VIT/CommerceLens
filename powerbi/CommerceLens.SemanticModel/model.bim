@@ -1,0 +1,1144 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"fact_orders\",\"fact_order_items\",\"dim_customer\",\"dim_product\",\"dim_seller\",\"dim_state\",\"dim_date\",\"cleaning_log\",\"Late Reduction %\",\"Scenario\",\"DataFolder\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:\\CommerceLens\\powerbi\\data\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "205f4495-59b5-461b-8d48-f363e804e681"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "79b81b99-df86-5763-9c9d-cb91b8bb7173",
+        "fromColumn": "customer_unique_id",
+        "fromTable": "fact_orders",
+        "toColumn": "customer_unique_id",
+        "toTable": "dim_customer"
+      },
+      {
+        "name": "0425ee73-f10d-58b0-b302-3ee17ac13ca7",
+        "fromColumn": "purchase_date",
+        "fromTable": "fact_orders",
+        "toColumn": "Date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "71f8f81a-2d22-5f79-ae4b-8f2c6ad9352b",
+        "fromColumn": "state",
+        "fromTable": "fact_orders",
+        "toColumn": "state",
+        "toTable": "dim_state"
+      },
+      {
+        "name": "7dab1d47-271b-54e4-9053-a9a591b2e4c6",
+        "fromColumn": "order_id",
+        "fromTable": "fact_order_items",
+        "toColumn": "order_id",
+        "toTable": "fact_orders"
+      },
+      {
+        "name": "285061db-d55b-56dc-9096-ef18f724ee9a",
+        "fromColumn": "product_id",
+        "fromTable": "fact_order_items",
+        "toColumn": "product_id",
+        "toTable": "dim_product"
+      },
+      {
+        "name": "670302a5-0d30-50e7-94a2-f445f214658e",
+        "fromColumn": "seller_id",
+        "fromTable": "fact_order_items",
+        "toColumn": "seller_id",
+        "toTable": "dim_seller"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "fact_orders",
+        "columns": [
+          {
+            "name": "order_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e96bc609-352a-47b4-b0be-8fc192cc7efe",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_unique_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "32d039b7-905b-4aea-8266-2aefa6e6c2f0",
+            "sourceColumn": "customer_unique_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "b5c4e43a-f2c3-443f-bac5-f3ebe18e6353",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_status",
+            "dataType": "string",
+            "lineageTag": "2aa3af3c-3965-4bbf-bad7-5ba4625e0d96",
+            "sourceColumn": "order_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "purchase_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "isHidden": true,
+            "lineageTag": "7a829e2f-745a-435d-8ae5-9649bd8a89cf",
+            "sourceColumn": "purchase_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delivered_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "isHidden": true,
+            "lineageTag": "1f363ac6-a9af-4aa1-b7c6-3136c2422df6",
+            "sourceColumn": "delivered_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "estimated_date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "isHidden": true,
+            "lineageTag": "25e5f400-c038-46f3-84fc-10a8a6dc9382",
+            "sourceColumn": "estimated_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "item_revenue",
+            "dataType": "decimal",
+            "isHidden": true,
+            "lineageTag": "bf44080c-3aa1-42cb-90d1-368dda9dcae4",
+            "sourceColumn": "item_revenue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "item_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "651edfb5-d586-491b-b657-8120054f2b9b",
+            "sourceColumn": "item_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "payment_total",
+            "dataType": "decimal",
+            "isHidden": true,
+            "lineageTag": "a1a71e71-52c1-4901-bf80-7668b567c7ca",
+            "sourceColumn": "payment_total",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "payment_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "ef143904-38b0-4443-ace1-7dc9e9773b15",
+            "sourceColumn": "payment_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delivery_days",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "08ca5143-44b0-4631-8a43-09672474357a",
+            "sourceColumn": "delivery_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "estimated_days",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "b2cffc46-f326-4cf2-b084-4d739f3464e1",
+            "sourceColumn": "estimated_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delay_days",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "6e64e383-9983-4c24-9370-93e498ce0df6",
+            "sourceColumn": "delay_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_late",
+            "dataType": "boolean",
+            "isHidden": true,
+            "lineageTag": "92cd207e-3b1f-47df-99a1-16c2a60c5720",
+            "sourceColumn": "is_late",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "review_score",
+            "dataType": "int64",
+            "lineageTag": "65ad8a6f-364c-4b00-8d6b-546dcdfc2e6e",
+            "sourceColumn": "review_score",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_low_review",
+            "dataType": "boolean",
+            "isHidden": true,
+            "lineageTag": "418d84fc-5ba9-4230-b110-dd77cbe6dec4",
+            "sourceColumn": "is_low_review",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delivery_group",
+            "dataType": "string",
+            "lineageTag": "e5088631-a6ab-41d8-95b3-17778d2f43fe",
+            "sourceColumn": "delivery_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delay_bin",
+            "dataType": "int64",
+            "lineageTag": "b919bbb5-20cb-4db0-9f11-da21036daee8",
+            "sourceColumn": "delay_bin",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "901f4e68-1328-40bf-9308-daa32631951a",
+        "measures": [
+          {
+            "name": "Total Revenue",
+            "description": "Gross item value plus freight, all statuses unless filtered. Not net recognized revenue; no refund data.",
+            "displayFolder": "01 Core",
+            "expression": "SUM(fact_order_items[revenue])",
+            "formatString": "\"R$\" #,0.00;(\"R$\" #,0.00);\"R$\" 0.00",
+            "lineageTag": "4550d573-0e27-4518-a620-702d64f591dd"
+          },
+          {
+            "name": "Orders",
+            "description": "Distinct order-grain rows; category/seller uses virtual order membership without double counting.",
+            "displayFolder": "01 Core",
+            "expression": [
+              "VAR MatchingOrders = VALUES(fact_order_items[order_id])",
+              "VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)",
+              "RETURN IF(ProductOrSellerFilter,",
+              "    CALCULATE(COUNTROWS(fact_orders), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),",
+              "    COUNTROWS(fact_orders))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "3614b5ae-2cea-43a7-b700-99cf4e0d5ebd"
+          },
+          {
+            "name": "AOV",
+            "description": "Selected item revenue divided by matching orders. Category selection gives selected-category spend per matching order.",
+            "displayFolder": "01 Core",
+            "expression": "DIVIDE([Total Revenue], [Orders])",
+            "formatString": "\"R$\" #,0.00;(\"R$\" #,0.00);\"R$\" 0.00",
+            "lineageTag": "3189660f-0e9e-4165-9e24-c89dd7f71b27"
+          },
+          {
+            "name": "Delivered Orders",
+            "description": "Delivered Orders",
+            "displayFolder": "01 Core",
+            "expression": "CALCULATE([Orders], KEEPFILTERS(fact_orders[order_status] = \"delivered\"))",
+            "formatString": "#,0",
+            "lineageTag": "91619d15-7cb6-46b5-ae09-f58415f43f56"
+          },
+          {
+            "name": "Delivery Eligible Orders",
+            "description": "Delivery Eligible Orders",
+            "displayFolder": "02 Delivery",
+            "expression": "CALCULATE([Delivered Orders], KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))",
+            "formatString": "#,0",
+            "lineageTag": "4887fada-ec18-41f2-98e6-a702f806de64"
+          },
+          {
+            "name": "Late Orders",
+            "description": "Late Orders",
+            "displayFolder": "02 Delivery",
+            "expression": "CALCULATE([Delivery Eligible Orders], KEEPFILTERS(fact_orders[is_late] = TRUE()))",
+            "formatString": "#,0",
+            "lineageTag": "6f0c1405-7ee5-4935-a0c3-79026eabbab5"
+          },
+          {
+            "name": "Late Delivery %",
+            "description": "Delivered orders with positive calendar-day delay / delivered orders with both dates.",
+            "displayFolder": "02 Delivery",
+            "expression": "DIVIDE([Late Orders], [Delivery Eligible Orders])",
+            "formatString": "0.00%",
+            "lineageTag": "aa37f9b8-5223-49d1-8b06-5cbf02b290c8"
+          },
+          {
+            "name": "Delay Sum",
+            "description": "Delay Sum",
+            "displayFolder": "02 Delivery",
+            "expression": [
+              "VAR MatchingOrders = VALUES(fact_order_items[order_id])",
+              "VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)",
+              "RETURN IF(ProductOrSellerFilter,",
+              "    CALCULATE(SUM(fact_orders[delay_days]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),",
+              "    SUM(fact_orders[delay_days]))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "eb80614f-419e-4d60-9870-c8c5c4b6d1ce"
+          },
+          {
+            "name": "Avg Delay Days",
+            "description": "Mean delay among late delivered orders only.",
+            "displayFolder": "02 Delivery",
+            "expression": "DIVIDE(CALCULATE([Delay Sum], KEEPFILTERS(fact_orders[order_status]=\"delivered\"), KEEPFILTERS(fact_orders[is_late]=TRUE())), [Late Orders])",
+            "formatString": "0.0",
+            "lineageTag": "e2c3ae35-6970-433a-9253-6f484fed9080"
+          },
+          {
+            "name": "Review Points",
+            "description": "Review Points",
+            "displayFolder": "03 Reviews",
+            "expression": [
+              "VAR MatchingOrders = VALUES(fact_order_items[order_id])",
+              "VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)",
+              "RETURN IF(ProductOrSellerFilter,",
+              "    CALCULATE(SUM(fact_orders[review_score]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),",
+              "    SUM(fact_orders[review_score]))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "6c973109-6067-425b-a89a-6c038a2b4a69"
+          },
+          {
+            "name": "Reviewed Orders",
+            "description": "Reviewed Orders",
+            "displayFolder": "03 Reviews",
+            "expression": [
+              "VAR MatchingOrders = VALUES(fact_order_items[order_id])",
+              "VAR ProductOrSellerFilter = ISCROSSFILTERED(dim_product) || ISCROSSFILTERED(dim_seller)",
+              "RETURN IF(ProductOrSellerFilter,",
+              "    CALCULATE(COUNT(fact_orders[review_score]), KEEPFILTERS(TREATAS(MatchingOrders, fact_orders[order_id]))),",
+              "    COUNT(fact_orders[review_score]))"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "ec34a436-c4d6-4440-95be-83f2aa14d1a9"
+          },
+          {
+            "name": "Delivered Reviewed Orders",
+            "description": "Delivered Reviewed Orders",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Reviewed Orders], KEEPFILTERS(fact_orders[order_status]=\"delivered\"))",
+            "formatString": "#,0",
+            "lineageTag": "394eb94f-0bc2-4c9e-a042-5e44ba0d66b0"
+          },
+          {
+            "name": "Avg Review Score",
+            "description": "Latest valid review per delivered order. Missing reviews are excluded, never scored as zero.",
+            "displayFolder": "03 Reviews",
+            "expression": "DIVIDE(CALCULATE([Review Points], KEEPFILTERS(fact_orders[order_status]=\"delivered\")), [Delivered Reviewed Orders])",
+            "formatString": "0.00",
+            "lineageTag": "6901c6d2-79a3-4354-bd2b-45e5037e1e1f"
+          },
+          {
+            "name": "Low Review Orders",
+            "description": "Low Review Orders",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[review_score] IN {1,2}))",
+            "formatString": "#,0",
+            "lineageTag": "74fa59e9-f3ed-4b2d-9d9e-cc37a57afc86"
+          },
+          {
+            "name": "Low Review %",
+            "description": "Low Review %",
+            "displayFolder": "03 Reviews",
+            "expression": "DIVIDE([Low Review Orders], [Delivered Reviewed Orders])",
+            "formatString": "0.00%",
+            "lineageTag": "ac2518a8-9a11-4d16-9722-824d42dbe064"
+          },
+          {
+            "name": "Late Reviewed Orders",
+            "description": "Late Reviewed Orders",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[is_late]=TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))",
+            "formatString": "#,0",
+            "lineageTag": "429620d2-6821-42ba-a4b5-8d05485b92c1"
+          },
+          {
+            "name": "On-time Reviewed Orders",
+            "description": "On-time Reviewed Orders",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Delivered Reviewed Orders], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))",
+            "formatString": "#,0",
+            "lineageTag": "b9a3fbbd-69a4-48d7-8e56-c95b8c857f6c"
+          },
+          {
+            "name": "Low Review % (Late)",
+            "description": "Low Review % (Late)",
+            "displayFolder": "03 Reviews",
+            "expression": "DIVIDE(CALCULATE([Low Review Orders], KEEPFILTERS(fact_orders[is_late]==TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days]))), [Late Reviewed Orders])",
+            "formatString": "0.00%",
+            "lineageTag": "89ba7842-7c5b-448d-ae6d-fff0b1010291"
+          },
+          {
+            "name": "Avg Rating (Late)",
+            "description": "Avg Rating (Late)",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Avg Review Score], KEEPFILTERS(fact_orders[is_late]==TRUE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))",
+            "formatString": "0.00",
+            "lineageTag": "b37c94dc-864d-4014-96fd-0ca3f7518cc7"
+          },
+          {
+            "name": "Low Review % (On-time)",
+            "description": "Low Review % (On-time)",
+            "displayFolder": "03 Reviews",
+            "expression": "DIVIDE(CALCULATE([Low Review Orders], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days]))), [On-time Reviewed Orders])",
+            "formatString": "0.00%",
+            "lineageTag": "b8c17e1a-352f-4664-812a-16447d5a8138"
+          },
+          {
+            "name": "Avg Rating (On-time)",
+            "description": "Avg Rating (On-time)",
+            "displayFolder": "03 Reviews",
+            "expression": "CALCULATE([Avg Review Score], KEEPFILTERS(fact_orders[is_late]==FALSE()), KEEPFILTERS(NOT ISBLANK(fact_orders[delay_days])))",
+            "formatString": "0.00",
+            "lineageTag": "549de594-6e9a-4ddd-9ba7-1daf93c97bc3"
+          },
+          {
+            "name": "Late vs On-time Gap (pp)",
+            "description": "Late vs On-time Gap (pp)",
+            "displayFolder": "03 Reviews",
+            "expression": [
+              "VAR LateRate = [Low Review % (Late)]",
+              "VAR OnTimeRate = [Low Review % (On-time)]",
+              "RETURN IF(NOT ISBLANK(LateRate) && NOT ISBLANK(OnTimeRate), (LateRate-OnTimeRate)*100)"
+            ],
+            "formatString": "0.00 \"pp\"",
+            "lineageTag": "129daa2b-66e0-4988-b2c7-53b82cb02306"
+          },
+          {
+            "name": "Revenue MoM %",
+            "description": "Uses purchase date. Edge months are partial; percent change is blank when prior revenue is zero/missing.",
+            "displayFolder": "04 Time",
+            "expression": [
+              "VAR PriorMonth = CALCULATE([Total Revenue], DATEADD(dim_date[Date], -1, MONTH))",
+              "RETURN DIVIDE([Total Revenue]-PriorMonth, PriorMonth)"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "2a53b07e-129f-4199-bb6f-4ace3e04724a"
+          },
+          {
+            "name": "Revenue YTD",
+            "description": "Revenue YTD",
+            "displayFolder": "04 Time",
+            "expression": "TOTALYTD([Total Revenue], dim_date[Date])",
+            "formatString": "\"R$\" #,0.00;(\"R$\" #,0.00);\"R$\" 0.00",
+            "lineageTag": "758df298-c625-4a87-99e5-a49401c022fe"
+          },
+          {
+            "name": "Revenue Same Period Last Year",
+            "description": "Revenue Same Period Last Year",
+            "displayFolder": "04 Time",
+            "expression": "CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(dim_date[Date]))",
+            "formatString": "\"R$\" #,0.00;(\"R$\" #,0.00);\"R$\" 0.00",
+            "lineageTag": "71cdd055-fce6-41b1-bd36-0b3b05de59b0"
+          },
+          {
+            "name": "Delivered Customers",
+            "description": "Delivered Customers",
+            "displayFolder": "05 Customers",
+            "expression": "COUNTROWS(FILTER(VALUES(dim_customer[customer_unique_id]), CALCULATE([Delivered Orders]) > 0))",
+            "formatString": "#,0",
+            "lineageTag": "c9c555c5-1a28-4318-8ad7-6f75d3b5c3dd"
+          },
+          {
+            "name": "Repeat Customers",
+            "description": "Repeat Customers",
+            "displayFolder": "05 Customers",
+            "expression": "COUNTROWS(FILTER(VALUES(dim_customer[customer_unique_id]), CALCULATE([Delivered Orders]) >= 2))",
+            "formatString": "#,0",
+            "lineageTag": "c7878ce0-2077-4c83-901f-812717214c49"
+          },
+          {
+            "name": "Repeat Customer %",
+            "description": "Customers with at least two delivered orders in current filter context / customers with at least one. Not cohort-adjusted retention.",
+            "displayFolder": "05 Customers",
+            "expression": "DIVIDE([Repeat Customers], [Delivered Customers])",
+            "formatString": "0.00%",
+            "lineageTag": "ca5305fb-0833-42b6-9b7d-f9979ea01bab"
+          },
+          {
+            "name": "Customers by RFM Segment",
+            "description": "Delivered customers in current filters, grouped by static RFM snapshot segment.",
+            "displayFolder": "05 Customers",
+            "expression": "[Delivered Customers]",
+            "formatString": "#,0",
+            "lineageTag": "f0420046-ca24-4753-b321-eb091ede0308"
+          },
+          {
+            "name": "Revenue Share of Top 10 Categories",
+            "description": "Revenue Share of Top 10 Categories",
+            "displayFolder": "01 Core",
+            "expression": [
+              "VAR CategoryRevenue = ADDCOLUMNS(ALLSELECTED(dim_product[category]), \"@Revenue\", CALCULATE([Total Revenue]))",
+              "VAR TopCategories = TOPN(10, CategoryRevenue, [@Revenue], DESC, dim_product[category], ASC)",
+              "RETURN DIVIDE(SUMX(TopCategories, [@Revenue]), SUMX(CategoryRevenue, [@Revenue]))"
+            ],
+            "formatString": "0.0%",
+            "lineageTag": "4ab8d35d-7301-47c9-8a6b-166a2422d50d"
+          },
+          {
+            "name": "Top 10 Category Revenue",
+            "description": "Top 10 Category Revenue",
+            "displayFolder": "01 Core",
+            "expression": [
+              "VAR RankedCategories = ADDCOLUMNS(ALLSELECTED(dim_product[category]), \"@Revenue\", CALCULATE([Total Revenue]))",
+              "VAR TopCategories = TOPN(10, RankedCategories, [@Revenue], DESC, dim_product[category], ASC)",
+              "RETURN CALCULATE([Total Revenue], KEEPFILTERS(TopCategories))"
+            ],
+            "formatString": "\"R$\" #,0.00;(\"R$\" #,0.00);\"R$\" 0.00",
+            "lineageTag": "b0382fca-3c01-4e31-97c2-799a47a3c94e"
+          },
+          {
+            "name": "Late Reduction % Value",
+            "description": "Disconnected what-if table, 0 to 100% in 5-point increments, default 50%.",
+            "displayFolder": "06 Scenario",
+            "expression": "SELECTEDVALUE('Late Reduction %'[Value], 0.50)",
+            "formatString": "0%",
+            "lineageTag": "0a4fb3f1-8635-487b-bdeb-9f5dedad6ad3"
+          },
+          {
+            "name": "Late Orders Avoided",
+            "description": "Late Orders Avoided",
+            "displayFolder": "06 Scenario",
+            "expression": [
+              "VAR Reduction = [Late Reduction % Value]",
+              "RETURN [Late Orders] * Reduction"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "bcc1ae04-7225-44c5-8103-de822539dfca"
+          },
+          {
+            "name": "Low Reviews Avoided",
+            "description": "Requested scenario extrapolates reviewed cohort rates to all late orders. Expected count, not a guaranteed outcome.",
+            "displayFolder": "06 Scenario",
+            "expression": [
+              "VAR Gap = [Low Review % (Late)] - [Low Review % (On-time)]",
+              "RETURN IF([Late Reviewed Orders]>0 && [On-time Reviewed Orders]>0, [Late Orders Avoided] * Gap)"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "f6c74764-6223-4390-bf4e-519928580f7b"
+          },
+          {
+            "name": "Projected Avg Rating",
+            "description": "Reassigns selected share of reviewed late orders to observed on-time mean; keeps review volume fixed. Associational scenario.",
+            "displayFolder": "06 Scenario",
+            "expression": [
+              "VAR ReviewedLateShifted = [Late Reviewed Orders] * [Late Reduction % Value]",
+              "VAR RatingUplift = [Avg Rating (On-time)] - [Avg Rating (Late)]",
+              "VAR Baseline = [Avg Review Score]",
+              "RETURN IF([Late Reviewed Orders]>0 && [On-time Reviewed Orders]>0,",
+              "    MIN(5, MAX(1, Baseline + DIVIDE(ReviewedLateShifted * RatingUplift, [Delivered Reviewed Orders]))))"
+            ],
+            "formatString": "0.00",
+            "lineageTag": "c8ec31b4-0045-467c-97f0-54e2aa954047"
+          },
+          {
+            "name": "Scenario Rating",
+            "description": "Scenario Rating",
+            "displayFolder": "06 Scenario",
+            "expression": "SWITCH(SELECTEDVALUE(Scenario[Scenario]), \"Before\", [Avg Review Score], \"After\", [Projected Avg Rating])",
+            "formatString": "0.00",
+            "lineageTag": "1765a10f-3537-4d37-a5e6-3a735099e9fa"
+          },
+          {
+            "name": "Scenario Late Orders",
+            "description": "Scenario Late Orders",
+            "displayFolder": "06 Scenario",
+            "expression": "SWITCH(SELECTEDVALUE(Scenario[Scenario]), \"Before\", [Late Orders], \"After\", [Late Orders]-[Late Orders Avoided])",
+            "formatString": "#,0",
+            "lineageTag": "8e6d2cd8-7c67-492a-a36c-b088dc7fa621"
+          },
+          {
+            "name": "Delivery Insight",
+            "description": "Delivery Insight",
+            "displayFolder": "07 Narrative",
+            "expression": [
+              "VAR LateRate = [Low Review % (Late)]",
+              "VAR OnTimeRate = [Low Review % (On-time)]",
+              "RETURN IF(ISBLANK(LateRate) || ISBLANK(OnTimeRate), \"Insufficient reviewed orders for a cohort comparison\",",
+              "\"Late deliveries receive 1–2 star reviews \" & FORMAT(LateRate,\"0.0%\") & \" of the time vs \" & FORMAT(OnTimeRate,\"0.0%\") & \" on-time\")"
+            ],
+            "formatString": "General",
+            "lineageTag": "175b36dd-ac6c-4e86-8891-b80a1f8f7a27"
+          },
+          {
+            "name": "Executive Insight",
+            "description": "Executive Insight",
+            "displayFolder": "07 Narrative",
+            "expression": "\"Top 10 categories generate \" & FORMAT([Revenue Share of Top 10 Categories],\"0.0%\") & \" of gross sales. Prioritize delivery reliability in these categories.\"",
+            "formatString": "General",
+            "lineageTag": "9db36f25-d54e-4d2b-969e-903c57b05f0c"
+          },
+          {
+            "name": "Scenario Insight",
+            "description": "Scenario Insight",
+            "displayFolder": "07 Narrative",
+            "expression": "\"Illustrative scenario: \" & FORMAT([Late Reduction % Value],\"0%\") & \" fewer late orders. Observed cohort differences are associations, not causal effects.\"",
+            "formatString": "General",
+            "lineageTag": "8dea1063-b6e6-4fe9-b8f8-fe2f2ce77329"
+          },
+          {
+            "name": "Retention Insight",
+            "description": "Retention Insight",
+            "displayFolder": "07 Narrative",
+            "expression": "\"Only \" & FORMAT([Repeat Customer %],\"0.0%\") & \" of delivered customers purchased again within the selected observation window.\"",
+            "formatString": "General",
+            "lineageTag": "44f03cce-9d3d-4606-93f1-6663138ec5e8"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_orders",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\fact_orders.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"order_id\", type text}, {\"customer_unique_id\", type text}, {\"state\", type text}, {\"order_status\", type text}, {\"purchase_date\", type date}, {\"delivered_date\", type date}, {\"estimated_date\", type date}, {\"item_revenue\", Currency.Type}, {\"item_count\", Int64.Type}, {\"payment_total\", Currency.Type}, {\"payment_count\", Int64.Type}, {\"delivery_days\", Int64.Type}, {\"estimated_days\", Int64.Type}, {\"delay_days\", Int64.Type}, {\"is_late\", type logical}, {\"review_score\", Int64.Type}, {\"is_low_review\", type logical}, {\"delivery_group\", type text}, {\"delay_bin\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_order_items",
+        "columns": [
+          {
+            "name": "order_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1be9258c-2c8f-4aae-90e8-488f396961ab",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_item_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "b43767e1-7189-4d4a-abb3-d80cf6bc3ea3",
+            "sourceColumn": "order_item_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c952c1d5-fb5e-47b9-a58a-dbaecf036c3b",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "ee98116b-36b7-48c4-93ea-95c90e3e4f3b",
+            "sourceColumn": "seller_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "price",
+            "dataType": "decimal",
+            "isHidden": true,
+            "lineageTag": "f33cfcab-1bd0-44a2-99ab-affbe9eb3079",
+            "sourceColumn": "price",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "freight_value",
+            "dataType": "decimal",
+            "isHidden": true,
+            "lineageTag": "171a7f0d-3ece-443f-8d73-49cb4360f24a",
+            "sourceColumn": "freight_value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revenue",
+            "dataType": "decimal",
+            "isHidden": true,
+            "lineageTag": "8eb421e5-69bc-43e0-a0b7-0cd215eb2671",
+            "sourceColumn": "revenue",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d172c280-4fcc-4697-911a-30ab307f8bbf",
+        "partitions": [
+          {
+            "name": "fact_order_items",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\fact_order_items.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"order_id\", type text}, {\"order_item_id\", Int64.Type}, {\"product_id\", type text}, {\"seller_id\", type text}, {\"price\", Currency.Type}, {\"freight_value\", Currency.Type}, {\"revenue\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_customer",
+        "columns": [
+          {
+            "name": "customer_unique_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "f800263f-5a37-4851-a911-92d347d79bd6",
+            "sourceColumn": "customer_unique_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "lineageTag": "93905681-1eb7-4b8d-bc64-f5cc2b4dd0d7",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "lineageTag": "a04350f5-da95-4280-8508-7e1ba5f21f37",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "recency",
+            "dataType": "int64",
+            "lineageTag": "25cfcff1-9d55-4b13-a2d6-fd64a30cc85b",
+            "sourceColumn": "recency",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "frequency",
+            "dataType": "int64",
+            "lineageTag": "c707b89b-0f23-4a8d-8751-c02d2d8bab23",
+            "sourceColumn": "frequency",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "monetary",
+            "dataType": "decimal",
+            "lineageTag": "3e88d147-7c36-41fa-8bab-f922753e62c2",
+            "sourceColumn": "monetary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rfm_segment",
+            "dataType": "string",
+            "lineageTag": "071b3d97-fd4f-4ed4-bed2-af32c5764d33",
+            "sourceColumn": "rfm_segment",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "29600c19-3162-4cce-aaee-5624518db5b4",
+        "partitions": [
+          {
+            "name": "dim_customer",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\dim_customer.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"customer_unique_id\", type text}, {\"city\", type text}, {\"state\", type text}, {\"recency\", Int64.Type}, {\"frequency\", Int64.Type}, {\"monetary\", Currency.Type}, {\"rfm_segment\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_product",
+        "columns": [
+          {
+            "name": "product_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9544756f-b6a9-4ce3-9a60-14c37df1b723",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "dataType": "string",
+            "lineageTag": "62ec3771-b4a3-4254-8223-8087080f2fde",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "dc5bdd17-8127-4771-b99e-bc7a30685cbb",
+        "partitions": [
+          {
+            "name": "dim_product",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\dim_product.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"product_id\", type text}, {\"category\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_seller",
+        "columns": [
+          {
+            "name": "seller_id",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e8574f31-efc5-47aa-a039-e961d095fff1",
+            "sourceColumn": "seller_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_city",
+            "dataType": "string",
+            "lineageTag": "f251e436-9b6c-4dd1-ac78-2346826d2fc9",
+            "sourceColumn": "seller_city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_state",
+            "dataType": "string",
+            "lineageTag": "bf465bcf-6aa0-4e29-94ea-2ec2f7b2b688",
+            "sourceColumn": "seller_state",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "12335583-56a3-48ed-bf91-12c63a6baa8e",
+        "partitions": [
+          {
+            "name": "dim_seller",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\dim_seller.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"seller_id\", type text}, {\"seller_city\", type text}, {\"seller_state\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_state",
+        "columns": [
+          {
+            "name": "state",
+            "dataCategory": "StateOrProvince",
+            "dataType": "string",
+            "lineageTag": "4f4feefb-4c08-41a1-93dd-cfd3a36f0460",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latitude",
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "lineageTag": "0b417c2a-0b3b-4865-8f6d-b6a9369d0d66",
+            "sourceColumn": "latitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "longitude",
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "lineageTag": "66267af4-21e2-4a61-90f6-1c943363791f",
+            "sourceColumn": "longitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "country",
+            "dataCategory": "Country",
+            "dataType": "string",
+            "lineageTag": "303eb11a-3e0b-4536-8483-022407a446fa",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7016c23a-808d-4f2d-beab-e3894c19d0b4",
+        "partitions": [
+          {
+            "name": "dim_state",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\dim_state.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"state\", type text}, {\"latitude\", type number}, {\"longitude\", type number}, {\"country\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "isKey": true,
+            "lineageTag": "eef2b65c-6eb7-4870-8279-46cea49fbaef",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "lineageTag": "40231b82-2a8c-444b-8b8d-699775f69547",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quarter",
+            "dataType": "string",
+            "lineageTag": "ae9b5078-0455-4277-93ab-9c6da038fcf7",
+            "sourceColumn": "quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "int64",
+            "lineageTag": "94376796-4986-4292-b54d-ff23f0cc91a7",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_name",
+            "dataType": "string",
+            "lineageTag": "ee8aa6d1-04dd-4254-b8af-f74d77806dcf",
+            "sortByColumn": "month",
+            "sourceColumn": "month_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "week",
+            "dataType": "int64",
+            "lineageTag": "edbf5401-cb99-4bde-8048-7e049d35b116",
+            "sourceColumn": "week",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year_month",
+            "dataType": "string",
+            "lineageTag": "4037fb4c-debd-4efb-98dc-b2a0309aa8d7",
+            "sourceColumn": "year_month",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "387b2f1b-3b5b-4327-bc66-21cf72b2cce8",
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\dim_date.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"Date\", type date}, {\"year\", Int64.Type}, {\"quarter\", type text}, {\"month\", Int64.Type}, {\"month_name\", type text}, {\"week\", Int64.Type}, {\"year_month\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "cleaning_log",
+        "columns": [
+          {
+            "name": "step",
+            "dataType": "string",
+            "lineageTag": "e192bd2e-461a-4927-a2e3-53df9361630c",
+            "sourceColumn": "step",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "detail",
+            "dataType": "string",
+            "lineageTag": "98c7be5c-b4f5-47a4-a380-4150bac9a002",
+            "sourceColumn": "detail",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "affected_rows",
+            "dataType": "int64",
+            "lineageTag": "94b1be37-9e3c-478f-ab99-e87bd1cf3333",
+            "sourceColumn": "affected_rows",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "00c3d2f2-db83-4606-a2b0-95c4ff04ae51",
+        "partitions": [
+          {
+            "name": "cleaning_log",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(Text.TrimEnd(DataFolder, \"\\\") & \"\\cleaning_log.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"step\", type text}, {\"detail\", type text}, {\"affected_rows\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Late Reduction %",
+        "columns": [
+          {
+            "name": "Value",
+            "dataType": "double",
+            "extendedProperties": [
+              {
+                "name": "ParameterMetadata",
+                "type": "json",
+                "value": {
+                  "version": 0
+                }
+              }
+            ],
+            "formatString": "0%",
+            "lineageTag": "2d060c60-ce9a-4bde-af42-50df78c960ca",
+            "sourceColumn": "Value",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a2954668-7176-45e9-8170-a6de2adc2731",
+        "partitions": [
+          {
+            "name": "Late Reduction %",
+            "mode": "import",
+            "source": {
+              "expression": "Table.FromColumns({List.Transform({0..20}, each _ / 20)}, type table [Value=number])",
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Scenario",
+        "columns": [
+          {
+            "name": "Scenario",
+            "dataType": "string",
+            "lineageTag": "02b51539-02a8-4cfb-92f9-9145297a5a78",
+            "sortByColumn": "Sort",
+            "sourceColumn": "Scenario"
+          },
+          {
+            "name": "Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "1f228501-02c0-46c9-bd8c-7f2e8f09e7ef",
+            "sourceColumn": "Sort"
+          }
+        ],
+        "lineageTag": "dae1d27e-8a75-4635-a0ce-cceb31ebd316",
+        "partitions": [
+          {
+            "name": "Scenario",
+            "mode": "import",
+            "source": {
+              "expression": "#table(type table [Scenario=text, Sort=Int64.Type], {{\"Before\",1},{\"After\",2}})",
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

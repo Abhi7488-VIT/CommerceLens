@@ -1,0 +1,142 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1174.3883770111756,
+            "y": 524.3532125570166
+          },
+          "nodeIndex": "cleaning_log",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 569.359267233158,
+            "y": -50
+          },
+          "nodeIndex": "dim_customer",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 68.591461504985546,
+            "y": 902.70642511403321
+          },
+          "nodeIndex": "dim_date",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 759.987623098084,
+            "y": 249.47516942340962
+          },
+          "nodeIndex": "dim_product",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 940.38837701117586,
+            "y": 428.50402975721909
+          },
+          "nodeIndex": "dim_seller",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 321.48040047394886
+          },
+          "nodeIndex": "dim_state",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 401.80599428411676,
+            "y": 249.24368271895491
+          },
+          "nodeIndex": "fact_order_items",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 243.41817201994752,
+            "y": 549.24245303370765
+          },
+          "nodeIndex": "fact_orders",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1458.3883770111756,
+            "y": 548.3532125570166
+          },
+          "nodeIndex": "Late Reduction %",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1742.3883770111756,
+            "y": 536.3532125570166
+          },
+          "nodeIndex": "Scenario",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

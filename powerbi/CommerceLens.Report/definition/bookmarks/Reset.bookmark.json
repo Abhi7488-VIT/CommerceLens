@@ -1,0 +1,311 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reset filters • 50% scenario",
+  "name": "Reset",
+  "options": {
+    "suppressActiveSection": true,
+    "suppressDisplay": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "Executive",
+    "sections": {
+      "Executive": {
+        "visualContainers": {
+          "sync_date": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_state": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_category": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_status": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Delivery": {
+        "visualContainers": {
+          "sync_date": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_state": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_category": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_status": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Scenario": {
+        "visualContainers": {
+          "sync_date": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_state": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_category": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_status": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "Reduction": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "s",
+                                "Entity": "Late Reduction %",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "s"
+                                            }
+                                          },
+                                          "Property": "Value"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "0.5D"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "Customers": {
+        "visualContainers": {
+          "sync_date": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_state": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_category": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          },
+          "sync_status": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "remove": [
+                  {
+                    "object": "general",
+                    "property": "filter",
+                    "selector": {}
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

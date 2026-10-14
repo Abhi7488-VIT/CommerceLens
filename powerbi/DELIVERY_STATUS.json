@@ -1,0 +1,19 @@
+{
+  "status": "DRAFT \u2014 Desktop verification pending",
+  "source_reconciliation": "PASS: all five requested source checks",
+  "schema_validation": "PASS: 98 checks",
+  "static_contracts": "PASS: 272 checks",
+  "model_deserialization": "PASS: Microsoft TOM",
+  "desktop_refresh": "NOT RUN",
+  "dax_engine_validation": "NOT RUN",
+  "visual_interaction_validation": "NOT RUN",
+  "requested_powerbi_screenshots": "NOT CAPTURED",
+  "png_previews": "Four data-derived Matplotlib previews; not Power BI screenshots",
+  "manual_steps": [
+    "Open CommerceLens.pbip in Power BI Desktop.",
+    "Set the DataFolder parameter to the CSV folder and refresh.",
+    "Verify measures, relationships/date metadata, parameter, synced slicers, reset, tooltips and drill-through.",
+    "Review map/security prompts yourself if required.",
+    "Capture four rendered Power BI pages; optionally save as CommerceLens.pbix."
+  ]
+}
